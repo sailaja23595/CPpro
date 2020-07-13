@@ -8,6 +8,9 @@
 
 public class PythonBasics {
     public String show_excitement() {
-    	// your code goes here
+    	return "Hello";
+	}
+	public static void main(String[] args){
+		
 	}
 }
