@@ -11,4 +11,6 @@ def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 		return True 
 	elif x > r1 + r2:
 		return False
+	else:
+		return True
 	
