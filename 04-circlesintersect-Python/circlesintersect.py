@@ -8,9 +8,9 @@ import math
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	x = math.sqrt((x1-x2)**2 + (y1-y2)**2)
 	if x < r1 -r2 :
-		return False 
+		return True 
 	elif x < r2-r1 :
-		return False
+		return True
 	elif x > r1 + r2:
 		return True
 	else:
