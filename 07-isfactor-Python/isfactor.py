@@ -11,7 +11,7 @@ def fun_isfactor(f, n):
 		return True
 	if n % f == 0 :
 		return True
-	if f % n == 0:
+	if n % f != 0:
 		return False
 	else :	
 		return False
