@@ -6,4 +6,19 @@
 
 
 def fun_ismultiple(m, n):
-	return False # replace with your solution
+	if (m % n == 0) :
+		return True
+	else:
+		return False # replace with your solution
+
+
+def fun_isFactor(f,n):
+	if n==0 and f==0:
+		return True
+	elif f == 0:
+		return False
+	if n % f == 0 :
+		return True
+	else:
+		return False
+
