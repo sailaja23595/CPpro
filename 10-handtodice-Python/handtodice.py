@@ -11,5 +11,4 @@ def handtodice(hand):
 	n1 = hand % 10
 	hand = hand // 10
 	n2 = hand % 10
-	hand = hand // 10
-	return (n,n1)
+	return (n2,n1,n)
