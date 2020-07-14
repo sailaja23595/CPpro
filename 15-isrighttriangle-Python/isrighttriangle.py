@@ -13,11 +13,11 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	a = fun_distance(x1,y1,x2,y2)
 	b = fun_distance(x1,y1,x3,y3)
 	c = fun_distance(x2,y2,x3,y3)
-	if(max(a,b,c) == a and a**2 == b**2 + c**2):
+	if(max(a,b,c) == a and math.isclose(a**2, b**2 + c**2)):
 		return True
-	elif(max(a,b,c) == b and b**2 == a**2 + c**2):
+	elif(max(a,b,c) == b and math.isclose(b**2, a**2 + c**2)):
 		return True
-	elif(max(a,b,c) == c and c**2 == a**2 + b**2):
+	elif(max(a,b,c) == c and math.isclose(c**2, a**2 + b**2)):
 		return True
 	else:
 		return False
