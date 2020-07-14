@@ -6,4 +6,11 @@
 
 def fun_eggcartons(eggs):
 	# your code goes here
+	x = 1
+	if eggs == 0:
+		return 0
+	elif eggs%x == 0:
+		return 0
+	elif eggs%x == 1:
+		return 1
 	return 1
