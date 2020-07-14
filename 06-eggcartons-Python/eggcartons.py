@@ -8,8 +8,8 @@ def fun_eggcartons(eggs):
 	# your code goes here
 	x = 12
 	if eggs%x == 0:
-		return eggs/x
+		return floor(eggs/x)
 	elif eggs%x == 1:
-		return eggs/x + 1
+		return floor(eggs/x) + 1
 	else:
 		return 1
