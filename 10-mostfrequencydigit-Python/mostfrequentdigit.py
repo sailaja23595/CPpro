@@ -3,12 +3,12 @@
 # that occurs most frequently in it, with ties going to the smaller digit.
 
 def mostfrequentdigit(n):
-	c = 0
-	number = n[0]
+	count = 0
+	# number = n[0]
 
 	for i in n:
 		frequent = n.count(i)
-		if(frquent > c):
-			c = frequent
+		if(frequent > count):
+			count = frequent
 			number = i 
 	return number
