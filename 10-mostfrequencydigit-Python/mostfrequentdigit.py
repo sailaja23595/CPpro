@@ -10,4 +10,4 @@ def mostfrequentdigit(n):
 		if(frequent > count):
 			count = frequent
 			number = i 
-	return number
+	return int(number)
