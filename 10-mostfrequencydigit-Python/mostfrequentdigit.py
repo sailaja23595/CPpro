@@ -3,5 +3,12 @@
 # that occurs most frequently in it, with ties going to the smaller digit.
 
 def mostfrequentdigit(n):
-	# your code goes here
-	pass
+	c = 0
+	number = n[0]
+
+	for i in n:
+		frequent = n.count(i)
+		if(frquent > c):
+			c = frequent
+			number = i 
+	return number
