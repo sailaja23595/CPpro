@@ -3,6 +3,10 @@
 # number contains two consecutive digits that are the same, and False otherwise.
 
 def hasconsecutivedigits(n):
-	st = str(n)
+	st = str(abs(n))
 	if(len(st) == 1):
+		return False
+	if(st[0] == st[1]):
+		return True
+	else:
 		return False
