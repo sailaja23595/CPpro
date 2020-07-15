@@ -5,7 +5,6 @@
 def mostfrequentdigit(n):
 	count = 0
 	# number = n[0]
-
 	for i in n:
 		frequent = n.count(i)
 		if(frequent > count):
