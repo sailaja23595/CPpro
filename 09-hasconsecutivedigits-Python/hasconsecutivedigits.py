@@ -6,7 +6,16 @@ def hasconsecutivedigits(n):
 	st = str(abs(n))
 	if(len(st) == 1):
 		return False
-	if(st[0] == st[1]):
-		return True
-	else:
+	elif(len(st) == 2):
+		if(st[0] == st[1]):
+			return True
+		else:
+			return False
+		var = -1
+		for i in range(len(st)):
+			if (st[i] == var):
+				return True
+			var = st[i]
 		return False
+
+		
