@@ -10,8 +10,6 @@
 # inches of fabric desired and returns the number of inches of excess 
 # fabric that must be purchased (as purchases must be in whole yards)
 # . Hint: you may want to use fabricYards, which you just wrote!
-
-
 def fun_fabricyards(inches):
 	if(inches%36 == 0):
 		return inches//36
@@ -21,5 +19,3 @@ def fun_fabricyards(inches):
 def fun_fabricexcess(inches):
 	# your code goes here
 	return 36 * fun_fabricyards(inches) - inches
-
-
