@@ -4,9 +4,9 @@
 
 def mostfrequentdigit(n):
 	count = 0
-	# number = n[0]
-	for i in n:
-		frequent = n.count(i)
+	number = str(n)
+	for i in number:
+		frequent = number.count(i)
 		if(frequent > count):
 			count = frequent
 			number = i 
