@@ -11,11 +11,11 @@ def hasconsecutivedigits(n):
 			return True
 		else:
 			return False
-		var = -1
-		for i in range(len(st)):
-			if (st[i] == var):
-				return True
-			var = st[i]
-		return False
+	var = -1
+	for i in range(len(st)):
+		if (st[i] == var):
+			return True
+		var = st[i]
+	return False
 
 		
