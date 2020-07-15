@@ -9,14 +9,7 @@ def mostfrequentdigit(n):
 		frequent = number.count(i)
 		if(frequent > count):
 			count = frequent
-			number = i 
+			# number = i 
 		return int(number)
-	else:
-		var = -1
-		for i in range(len(number) - 1):
-			if(number[i] == number[i+1]):
-				var = number[i]
-				count = count + 1
-		if count > 0:
-			return int(var)
+	
 
