@@ -10,4 +10,4 @@ def removeduplicate(text):
 			pass
 		else:
 			st = st + i
-		return st
+	return st
