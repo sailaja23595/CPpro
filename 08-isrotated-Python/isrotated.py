@@ -3,7 +3,6 @@
 # if given String is "XYZ" and "ZXY" then your function should return true, but if the input is 
 # "XYZ" and "YXZ" then return false.
 
-
 def isrotated(str1, str2):
 	st = ""
 	for i in str2:
