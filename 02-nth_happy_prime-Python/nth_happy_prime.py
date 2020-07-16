@@ -2,8 +2,6 @@
 # Write the function nthHappyPrime(n) which takes a non-negative integer 
 # and returns the nth happy prime number (where the 0th happy prime number is 7).
 
-
-
 def ishappynumber(n):
 	def sumofsquares(num1):
 		add = 0
