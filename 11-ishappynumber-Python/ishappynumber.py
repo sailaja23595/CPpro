@@ -15,5 +15,19 @@
 # assert(ishappynumber(405) == False)
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	def sumofsquares(num1):
+		add = 0
+		while(num1 > 0):
+			r = num1 % 10
+			add = add + (r**2)
+			num1 = num1 // 10
+		return add
+	l = []
+	while sumofsquares(n) not in l:
+		res = sumofsquares(n)
+		if res == 1:
+			return True
+		else:
+			l.append(res)
+			n = res
+	return False
