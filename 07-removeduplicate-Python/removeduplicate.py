@@ -6,7 +6,7 @@
 def removeduplicate(text):
 	st = ""
 	for i in text:
-		if(i == st):
+		if(i in st):
 			pass
 		else:
 			st = st + i
