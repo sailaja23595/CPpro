@@ -6,8 +6,15 @@
 # the string "ac#D!f2". Assume that both s1 and s2 will always be strings.
 
 def fun_interleave(s1,s2):
-	b = ''
-	b[::2] = s1
-	b[1::2] = s2
-	return str(b)
+	st = ""
+	if(len(s1) == len(s2)):
+		for i in range(len(s1)):
+			st = st + s1[i] + s2[i]
+	return st
+
+	if(len(s1) < len(s2)):
+		for i in range(len(s1)):
+			st = st + s1[i] + s2[i]
+		st = st + s2(len(s2)- len(s1) - 1)
+	return st
 	
