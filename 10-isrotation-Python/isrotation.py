@@ -4,7 +4,6 @@
 # returns True if x is a rotation of the digits of y and False otherwise. For example, 
 # 3412 is a rotation of 1234. Any number 
 # is a rotation of itself.
-
 def isrotation(x, y):
 	if(len(str(x)) != len(str(y))):
 		return False
