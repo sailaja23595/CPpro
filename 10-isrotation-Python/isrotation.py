@@ -10,5 +10,4 @@ def isrotation(x, y):
 		return False
 	if str(y) in str(x) + str(x):
 		return True
-	
 	return False
