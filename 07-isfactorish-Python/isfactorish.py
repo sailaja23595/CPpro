@@ -13,4 +13,3 @@
 
 def fun_isfactorish(n):
 	return False
-
