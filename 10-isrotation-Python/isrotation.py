@@ -8,11 +8,7 @@
 def isrotation(x, y):
 	if(len(str(x)) != len(str(y))):
 		return False
-	while(x == y):
-		power = pow(10, len(str(x))-1)
-		for i in range(len(str(x))-1):
-			firstd = x//power
-			left = (x*10+firstd - (firstd * power * 10))
-		x = left
-	return True
-	# return False
+	if str(y) in str(x) + str(x):
+		return True
+	
+	return False
