@@ -13,7 +13,7 @@ def partition(array,start,end):
 		while array[right] >= pivot and right >= left:
 			right = right - 1
 		if right < left:
-			return True
+			res = True
 		else:
 			t = array[left]
 			array[left] = array[right]
@@ -27,8 +27,9 @@ def quicksupport(array,start,end):
 	if start < end:
 		point = partition(array,start,end)
 		quicksupport(array,start,point-1)
-		quicksupport(array,point-1,end)
+		quicksupport(array,point+1,end)
 
 def quicksort(array):
 	quicksupport(array,0,len(array)-1)
+	return array
 	
