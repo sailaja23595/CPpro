@@ -6,5 +6,13 @@
 # is a rotation of itself.
 
 def isrotation(x, y):
-	# Your code goes here
-	pass
+	if(len(str(x)) != len(str(y))):
+		return False
+	while(x == y):
+		power = pow(10, len(str(x))-1)
+		for i in range(len(str(x))-1):
+			firstd = x//power
+			left = (x*10+firstd - (firstd * power * 10))
+		x = left
+	return True
+	# return False
