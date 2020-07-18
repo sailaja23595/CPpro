@@ -9,6 +9,19 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+def fun_getaverage(s):
+	add = 0
+	count = 0
+	spli = s.split(",")
+	for i in spli:
+		if(i.isdigit()):
+			if(int(i)>= 0):
+				count = count + 1
+				add = add + int(i)
+	if(count == 0):
+		return 0.0	
+	else:
+		avg = add/count
+		return float(avg)
+	
 
