@@ -6,11 +6,11 @@
 def isOdd(i):
 	if(i%2 !=0):
 		return True
-	return false
+	return False
 
 def fun_alternatingsum(a):
-	for i in range(len(a)):
-		if(isOdd):
+	for i in range(1,len(a)):
+		if(isOdd(i)):
 			a[i] = a[i] * (-1)
 	return sum(a)
 
