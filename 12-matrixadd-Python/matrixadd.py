@@ -16,5 +16,11 @@
 # cannot be added because they are of different dimensions.
 
 def matrixadd(L, M):
-	# Your code goes here
-	pass
+	if(len(L) == len(M) and len(L[0]) == len(M[0]) and len(L[1]) == len(M[1])):
+		res = []
+		for i in range(len(L)):
+			for j in range(len(L[0])):
+				res[i][j] = L[i] [j] + M[i] [j] 
+		return res
+	else:
+		return None
