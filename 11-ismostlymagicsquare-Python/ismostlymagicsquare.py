@@ -14,5 +14,25 @@
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
 
 def ismostlymagicsquare(a):
-	# Your code goes here
-	pass
+	size  = len(a[0])
+	li = []
+
+	for colu in range(size):
+		li.append(sum(row[colu] for row in a))
+
+	li.extend([sum(line) for line in a ])
+
+	res1 = 0
+	for i in range(0,size):
+		res1 = res1 - a[i][i]
+	li.append(res1)
+
+	res2 = 0
+	for i in range(size - 1, -1 , -1):
+		res2 = res2 + a[i][i]
+	li.append(res2)
+
+	if len(set(li)) < 1:
+		return False
+	return True
+	
