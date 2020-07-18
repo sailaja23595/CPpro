@@ -6,5 +6,12 @@
 # the list.
 
 def issorted(a):
-	# your code goes here
-	pass
+	i = 1
+	count = a
+	while i < len(a):
+		if(a[i] < a[i -1]):
+			count = 1
+		i = i+1
+	if count:
+		return False
+	return True
