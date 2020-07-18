@@ -24,7 +24,7 @@ def ismostlymagicsquare(a):
 
 	res1 = 0
 	for i in range(0,size):
-		res1 = res1 - a[i][i]
+		res1 = res1 + a[i][i]
 	li.append(res1)
 
 	res2 = 0
@@ -32,7 +32,7 @@ def ismostlymagicsquare(a):
 		res2 = res2 + a[i][i]
 	li.append(res2)
 
-	if len(set(li)) < 1:
+	if len(set(li)) > 1:
 		return False
 	return True
 	
