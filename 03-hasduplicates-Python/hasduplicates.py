@@ -3,6 +3,15 @@
 # contains any duplicate values (that is, 
 # if any two values in L are equal to each other), and False otherwise.
 
+[2,7,9,9,5,1,4,3,8]
 def hasduplicates(L):
-	# Your code goes here
-	pass
+	lis = []
+	c = 0
+	li = [j for sub in L for j in sub]
+	for i in li: 
+		if i in lis:
+			c = c + 1
+		lis.append(i)
+	if c <= 0:
+		return False
+	return True
