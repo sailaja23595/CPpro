@@ -14,4 +14,5 @@ def issorted(a):
 		i = i+1
 	if count:
 		return False
+
 	return True
