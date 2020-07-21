@@ -11,9 +11,9 @@
 def inverselookandsay(a):
 	res = []
 	for i in range(len(a)):
-		if a[i] == []:
+		if a[i] == ():
 			return []
-		(x,y) = a[i]
-		for j in range(x):
-			res.append(y)
+		(s,t) = a[i]
+		for j in range(s):
+			res.append(t)
 	return res
