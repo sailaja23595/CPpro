@@ -7,7 +7,7 @@
 
 def issorted(a):
 	i = 1
-	count = a
+	count = 0
 	while i < len(a):
 		if(a[i] < a[i -1]):
 			count = 1
