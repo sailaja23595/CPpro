@@ -15,11 +15,16 @@
 # None if the two matrices 
 # cannot be added because they are of different dimensions.
 def matrixadd(L, M):
-	if(len(L) == len(M) and len(L[0]) == len(M[0]) and len(L[1]) == len(M[1])):
-		res = []
-		for i in range(len(L)):
-			for j in range(len(L[0])):
-				res[i][j] = L[i] [j] + M[i] [j] 
-		return res
-	else:
+	res = []
+	if(len(L) != len(M) or len(L[0]) != len(M[0])) :
 		return None
+	else:
+		for i in range(len(L)):
+			if i> 0 and len(L[i]) != len(M[i]):
+				return None
+			li = []
+			for j in range(len(L[0])):
+				li.append(L[i] [j] + M[i] [j] )
+			res.append(li)
+		return res
+	
