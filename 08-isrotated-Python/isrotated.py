@@ -4,9 +4,15 @@
 # "XYZ" and "YXZ" then return false.
 
 def isrotated(str1, str2):
-	st = ""
-	for i in str2:
-		st = i + st
-	if(str1 == st):
+	# st = ""
+	# for i in str2:
+	# 	st = i + st
+	# if(str1 == st):
+	# 	return True
+	# return False
+	if(len(str(str1)) != len(str(str2))):
+		return False
+	if str(str2) in str(str1) * 2 or str(str1[0]) == str(str2[-1]):
 		return True
-	return False
+	else:
+		return False
