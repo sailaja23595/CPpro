@@ -6,7 +6,9 @@
 
 def fun_recursions_alternatingsum(l): 
 	if len(l) == 1:
-		return 0
+		return l[0]
 	else:
 		return sum(l[::2]) - sum(l[1::2])
+
+
 	        
