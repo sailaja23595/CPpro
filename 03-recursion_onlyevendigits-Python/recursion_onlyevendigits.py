@@ -9,4 +9,8 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 def fun_recursion_onlyevendigits(l): 
+
+	if(l == 1):
 		return []
+	else:
+		return l[0] - l[1] + fun_recursion_onlyevendigits(l[2:])
