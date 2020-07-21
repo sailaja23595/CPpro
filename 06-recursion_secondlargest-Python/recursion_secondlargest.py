@@ -14,5 +14,15 @@
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
 def recursion_secondlargest(L):
-	# Your code goes here
-	pass
+	
+	if len(L) <= 0:
+		return None
+	large = L[0]
+	large2 = None
+	for i in L[1:]:
+		if i>large:
+			large2 = large
+			large = i
+		elif large2 == None or large2 < i:
+			large2 = i
+	return large2
