@@ -18,6 +18,16 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 def recursion_binarysearchvalues(L, v):
-	# Your codes goes here
-	pass
-	
+	ar = [(),()]
+	lo = 0 
+	hi = len(L) - 1 #5
+	mid = 0
+	while lo <= hi: #0<=5
+		mid = (hi + lo)//2 #5+0/2 = 2.5
+		if L[mid] < v:    
+			lo = mid + 1
+		elif L[mid] > v:
+			hi = mid - 1 #hi =  2
+		else: 
+			return mid
+	return -1
