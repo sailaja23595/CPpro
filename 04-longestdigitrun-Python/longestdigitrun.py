@@ -25,7 +25,7 @@ def longestdigitrun(n):
 	c = 1
 	best = pre
 	bestcount = c
-	while n>=0:
+	while not n:
 		current = n + 1
 		if current == prev:
 			c += 1
