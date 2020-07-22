@@ -6,5 +6,15 @@
 
 
 def fun_carrylessadd(x, y):
-	return 0
+	res = 0
+	m = 1
+	add = 0
+	while(x or y):
+		add = ((x%10) + (y%10))
+		add = add % 10
+		res = (add * m) + res
+		x = math.floor(x/10)
+		y = math.floor(y/10)
+		m = m * 10
+	return res
 
