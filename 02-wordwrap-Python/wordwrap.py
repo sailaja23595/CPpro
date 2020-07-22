@@ -17,7 +17,14 @@
 
 
 def fun_wordwrap(s, n):
-	return ""
+	st = s.strip().replace(" ","-")
+	st1 = ""
+	for i in range(len(st)):
+		if i>0 and i%n == 0:
+			st1 = st1 + "\n" + st[i]
+		else:
+			st1 = st1 + st[i] 
+	return st1
 
 
  
