@@ -16,18 +16,18 @@ def destructiveshortenlongruns(L, k):
 	m = 0
 	n = 0
 	p = 0
-	while i < len(L):
-		if n == L[i]:
+	while m < len(L):
+		if n == L[m]:
 			p = p + 1
 			if p >= k:
-				L.pop(i)
-				i = i - 1
-		elif i == 0:
-			n = L[i]
-			j = j + 1
+				L.pop(m)
+				m = m - 1
+		elif m == 0:
+			n = L[m]
+			p = p + 1
 
 		else:
-			n = L[i]
+			n = L[m]
 			p = 1
-		i = i + 1
-	return j
+		m = m + 1
+	return L
