@@ -7,14 +7,14 @@
 import math
 def fun_carrylessadd(x, y):
 	res = 0
-	m = 1
+	mul = 1
 	add = 0
 	while(x or y):
 		add = ((x%10) + (y%10))
 		add = add % 10
-		res = (add * m) + res
+		res = (add * mul) + res
 		x = math.floor(x/10)
 		y = math.floor(y/10)
-		m = m * 10
+		mul = mul * 10
 	return res
 
