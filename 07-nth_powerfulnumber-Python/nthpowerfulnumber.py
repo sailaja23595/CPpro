@@ -4,7 +4,34 @@
 # A number n is said to be Powerful Number if for every prime factor p of it, p2 also divides it. 
 # For example:- 36 is a powerful number. It is divisible by both 3 and square of 3 i.e, 9.
 
+# def isprimefact(n):
+# 	pf = []
+# 	i = 2
+# 	while i * i <= n:
+# 		if n % i == 0:
+# 			pf.append(i)
+# 			n = n//i
+# 		else:
+# 			i = i + 1
+# 	if n > 1:
+# 		pf.append(n)
+# 	return pf
 
+def powerful(n):
+	i = 2
+	while n > 1:
+		if n%i == 0:
+			if n % (i ** 2) != 0:
+				return False
+			while n > 1 and n%i == 0:
+				n = n//i
+		else:
+			i = i + 1
+	return True
 def nthpowerfulnumber(n):
-	# Your code goes here
-	pass
+	li = []
+	for i in range(1500):
+		if powerful(i):
+			li.append(i)
+	return li[n+1]
+
