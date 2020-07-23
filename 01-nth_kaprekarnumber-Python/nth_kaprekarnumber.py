@@ -9,5 +9,30 @@
 
 import math
 
+def karpekar(n):
+    if n <= 0:
+        return False
+    p = n ** 2
+    if p < 10:
+        if p == n:
+            return True
+    number = math.ceil(math.log(p,10))
+    c = 1
+    while c < number:
+        number1 = p % 10 ** c
+        number2 = p // 10 ** c
+        if number1 == 0:
+            c = c + 1
+            continue
+        if number1 + number2 == n:
+            return True
+            break
+        c = c + 1
+    return False
+
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    li = []
+    for i in range(79000):
+        if karpekar(i):
+            li.append(i)
+    return li[n]
