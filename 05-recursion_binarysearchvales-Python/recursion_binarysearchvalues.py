@@ -16,18 +16,20 @@
 #     v = 'c'
 #     assert(binarySearchValues(L, v) == [(2,'f'), (0,'a'), (1,'c')])
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
-
+def isBinary(prev,f,l,v,pres):
+	if f > l:
+		return pres
+	mid  = (f+l) // 2
+	pres = pres + [(mid,prev[mid])]
+	if prev[mid] == v:
+		return pres
+	else:
+		if v < prev[mid]:
+			return isBinary(prev,f,mid-1,v,pres)
+		else:
+			return isBinary(prev,mid + 1,l,v,pres)
 def recursion_binarysearchvalues(L, v):
-	ar = [(),()]
-	lo = 0 
-	hi = len(L) - 1 #5
-	mid = 0
-	while lo <= hi: #0<=5
-		mid = (hi + lo)//2 #5+0/2 = 2.5
-		if L[mid] < v:    
-			lo = mid + 1
-		elif L[mid] > v:
-			hi = mid - 1 #hi =  2
-		else: 
-			return mid
-	return -1
+	f = 0 
+	l = len(L) - 1 
+	pres = []
+	return isBinary(L,f,l,v,pres)
