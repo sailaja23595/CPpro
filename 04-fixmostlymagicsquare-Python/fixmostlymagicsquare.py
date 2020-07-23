@@ -7,19 +7,19 @@
 
 
 def fixmostlymagicsquare(L):
-	li = []
+	li = []                     
 	for i in L:
 		p = 0
 		p = p + sum(i)
 		li.append(p)
-	if (len(li) != len(set(li))):
-		q = max(li) - min(li)
-		large = max(li)
+	if (len(li) != len(set(li))): 
+		q = max(li) - min(li)     
+		large = max(li)            
 		for i in li:
-			if i == large:
-				position = li.index(max(li))
-		a = L[position]
-		position1 = a.index(max(a))
-		a[position1] = max(a) - q
+			if i == large:           
+				position = li.index(max(li))   
+		a = L[position]                         
+		position1 = a.index(max(a))				
+		a[position1] = max(a) - q			
 		L[position] = a
 		return L
