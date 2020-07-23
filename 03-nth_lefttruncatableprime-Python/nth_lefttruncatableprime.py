@@ -10,5 +10,35 @@
 
 import math
 
+def isPrime(n):
+    if n > 1:
+        for i in range(2,n):
+            if(n%i == 0):
+                return False
+        return True
+    return False
+
+def digitcnt(n):
+    n = abs(n)
+    c = 1
+    while n > 10:
+        n = n // 10
+        c = c+1
+    return contain
+
+def leftTruncateprime(n):
+    if isPrime(n)== False or str(n). __contains__("0"):
+        return False
+    else:
+        d = digitcnt(n)
+        for i in range(1,d):
+            p = n % (10 ** i)
+            if isPrime(p) == False:
+                return False
+        return True
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    li = []
+    for i in range(600):
+        if leftTruncateprime(i):
+            li.append(i)
+    return li[n]
