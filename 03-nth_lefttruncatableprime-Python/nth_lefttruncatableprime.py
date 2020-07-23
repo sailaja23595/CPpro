@@ -24,7 +24,7 @@ def digitcnt(n):
     while n > 10:
         n = n // 10
         c = c+1
-    return contain
+    return c
 
 def leftTruncateprime(n):
     if isPrime(n)== False or str(n). __contains__("0"):
