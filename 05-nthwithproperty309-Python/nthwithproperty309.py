@@ -6,9 +6,9 @@
 
 def withproperty309(n):
 	c = 0
-	t = n
 	i = 0
 	n = n ** 5
+	t = n
 	while n > 0:
 		if i != n %10:
 			n = n // 10
