@@ -13,7 +13,7 @@ def isPrime(n):
         for i in range(2,n):
             if(n%i == 0):
                 return False
-        return True
+            return True
     return False
 
 def fun_nth_carolprime(n):
@@ -24,4 +24,4 @@ def fun_nth_carolprime(n):
         cp = (((2**k) - 1) ** 2)-2
         if isPrime(cp):
             i = i + 1
-    return i
+    return cp
