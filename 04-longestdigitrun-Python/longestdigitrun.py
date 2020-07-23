@@ -21,19 +21,27 @@ def longestdigitrun(n):
 	# 			current = 1
 	# return max(longest)
 
-	pre = n
+	if n < 0:
+		n = -n
+	d = {}
 	c = 1
-	best = pre
-	bestcount = c
-	while not n:
-		current = n + 1
-		if current == prev:
-			c += 1
-		else:
-			prev = current
-			c = 1
-		if c > bestcount:
-			bestcount = c
-			best = current
-	return (bestcount)
+	li = list(map(int,str(n)))
+	for i in range(len(li) - 1):
+		if li[i] == li[i+1]:
+			c = 0
+			if li[i] not in d:
+				d[li[i]] = 1
+			else:
+				d[li[i]] = d[li[i]] + 1
+
+	if c==1:
+		li.sort()
+		return li[0]
+	dic = {}
+	m = sorted(d.keys())
+	for i in m:
+		dic[i] = d[i]
+	dic = sorted(dic.items(), key = lambda item : item[1],reverse = True)
+	return dic[0][0]	
+
 
