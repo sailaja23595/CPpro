@@ -9,13 +9,13 @@ def automorphic(n):
 	while(n>0):
 		if(n%10 != s%10):
 			return False
-		n = n/10
-		s = s/10
+		n = n//10
+		s = s//10
 	return True
 
 def nthautomorphicnumbers(n):
 	li = []
-	for i in range(50000):
+	for i in range(500000):
 		if automorphic(i):
 			li.append(i)
-	return li[n]
+	return li[n-1]
