@@ -8,5 +8,11 @@
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
 
 def leastfrequentletters(s):
-	# Your code goes here
-	pass
+	string = ""
+	if s.isalpha():
+		for i in s:
+			if string in i:
+				string[i] = string[i] + 1
+			return string 
+	return ''
+		
