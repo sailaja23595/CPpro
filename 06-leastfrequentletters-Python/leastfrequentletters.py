@@ -6,7 +6,7 @@
 # returns "be". Note that digits, punctuation, and whitespace are not letters! Also note that seeing as we have not 
 # yet covered lists, sets, maps, or efficiency, you are not expected to write the most efficient solution. Finally, 
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
-
+import string
 # def splitstr(str):
 # 	alp = ""
 # 	number = ""
@@ -31,7 +31,7 @@ def leastfrequentletters(s):
 		i = i+1
 	if res == '':
 		return res
-	
+	return res
 	
 	# string = ""
 	# if s.isalpha():
