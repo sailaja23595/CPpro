@@ -25,9 +25,11 @@ def leastfrequentletters(s):
 	i = 0
 	while i < 26:
 		c = s.count(alp[i])
-		if minc > c > 0 or minc == c:
+		if minc > c > 0 : 
 			minc = c
 			res = alp[i]
+		elif minc == c:
+			res = res+alp[i]
 		i = i+1
 	if res == '':
 		return res
