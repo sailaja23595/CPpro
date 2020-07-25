@@ -15,7 +15,6 @@ def isPrime(n):
             return False
     return True 
 
-
 def ishappynumber(n):
     def sumofsquares(num1):
         add = 0
